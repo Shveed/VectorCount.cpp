@@ -1,5 +1,4 @@
 #include "vector.h"
-#include "stdafx.h"
 #include "iostream"
 using namespace std;
 
