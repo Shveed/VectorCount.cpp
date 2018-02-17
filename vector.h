@@ -1,6 +1,5 @@
 #ifndef VECTOR_H
 #define VECTOR_H
-#include "stdafx.h"
 #include <cmath>
 #include <string.h>
 
