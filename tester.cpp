@@ -4,9 +4,10 @@ using namespace std;
 
 int main()
 {
-	double vx3, vy3, num, mult;
+	double num, mult;
 	vector v1;
 	vector v2;
+	vector v3;
 	char op;
 	printMenu();
 	cin >> op;
@@ -17,18 +18,16 @@ int main()
 	case 'A':
 		cout << "Enter x1 y1 x2 y2 coordinates" << endl;
 		cin >> v1.x >> v1.y >> v2.x >> v2.y;
-		vx3 = add(v1.x, v2.x);
-		vy3 = add(v1.y, v2.y);
-		printVector(vx3, vy3);
+		v3 = add(&v1, &v2);
+		printVector(&v3);
 		break;
 
 	case 's':
 	case 'S':
 		cout << "Enter x1 y1 x2 y2 coordinates" << endl;
 		cin >> v1.x >> v1.y >> v2.x >> v2.y;
-		vx3 = substract(v1.x, v2.x);
-		vy3 = substract(v1.y, v2.y);
-		printVector(vx3, vy3);
+		v3 = substract(&v1, &v2);
+		printVector(&v3);
 		break;
 
 	case 'v':
@@ -45,9 +44,8 @@ int main()
 		cin >> v1.x >> v1.y;
 		cout << "Enter number" << endl;
 		cin >> num;
-		vx3 = multiplyNumVec(num, v1.x);
-		vy3 = multiplyNumVec(num, v1.y);
-		printVector(vx3, vy3);
+		v3 = multiplyNumVec(num, &v1);
+		printVector(&v3);
 		break;
 
 	case 'l':
