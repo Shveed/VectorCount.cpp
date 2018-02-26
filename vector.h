@@ -1,4 +1,4 @@
-typedef struct vector {
+typedef struct {
 	int x;
 	int y;
 }vector;
@@ -10,10 +10,10 @@ typedef struct vector {
 #include <iostream>
 
 void printMenu();
-void printVector(double vx3, double vy3);
-double add(double a, double b);
-double substract(double a, double b);
-double multiplyNumVec(double n, double coord);
+void printVector(vector *v);
+vector add(vector *v1, vector *v2);
+vector substract(vector *v1, vector *v2);
+vector multiplyNumVec(double n, vector *v1);
 double vectorLength(vector v);
 
 #endif VECTOR_H
