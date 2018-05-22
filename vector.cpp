@@ -15,37 +15,14 @@ void printMenu()
 	cout << "-------------------------------" << endl;
 }
 
-void printVector (vector *v)
-{
-	cout << "New vector is (" << v->x << ';' << v->y << ')' << endl;
-}
+void(*Pointer)();
 
-vector add(vector *v1, vector *v2)
-{
-	vector v;
-	v.x = v1->x + v2->x;
-	v.y = v1->y + v2->y;
-	return v;
-}
+void printVector(double vx3, double vy3) { cout << "New vector is (" << vx3 << ';' << vy3 << ')' << endl; }
 
-vector substract(vector *v1, vector *v2)
-{
-	vector v;
-	v.x = v1->x - v2->x;
-	v.y = v1->y - v2->y;
-	return v;
-}
+double add(double a, double b) { return a + b; }
 
-vector multiplyNumVec(double n, vector *v1)
-{
-	vector v;
-	v.x = v1->x * n;
-	v.y = v1->y * n;
-	return v;
-}
+double substract(double a, double b) { return a - b; }
 
-double vectorLength(vector v)
-{
-	
-	return (sqrt(pow(v.x, 2) + pow(v.y, 2)));
-}
+double multiplyNumVec(double n, double coord) { return n * coord; }
+
+double vectorLength(vector v) { return (sqrt(pow(v.x, 2) + pow(v.y, 2))); }
